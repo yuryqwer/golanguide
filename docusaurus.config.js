@@ -46,8 +46,8 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          // showLastUpdateAuthor: true,
-          // showLastUpdateTime: true,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           path: './docs',
           sidebarPath: './sidebars.js',
           // Please change this to your repo.
