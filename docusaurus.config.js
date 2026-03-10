@@ -105,9 +105,9 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
       giscus: {
-        repo: "yuryqwer/golanguide",
+        repo: process.env.GISCUS_REPO,
         repoId: process.env.GISCUS_REPO_ID,
-        category: "Announcements",
+        category: 'Announcements',
         categoryId: process.env.GISCUS_CATEGORY_ID,
       },
       algolia: {
