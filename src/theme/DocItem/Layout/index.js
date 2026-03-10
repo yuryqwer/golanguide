@@ -1,4 +1,4 @@
-import React, {useEffect, useRef} from 'react';
+import React from 'react';
 import clsx from 'clsx';
 import {useWindowSize} from '@docusaurus/theme-common';
 import {useDoc} from '@docusaurus/plugin-content-docs/client';
@@ -12,6 +12,7 @@ import DocItemContent from '@theme/DocItem/Content';
 import DocBreadcrumbs from '@theme/DocBreadcrumbs';
 import ContentVisibility from '@theme/ContentVisibility';
 import styles from './styles.module.css';
+import GiscusComments from '@site/src/components/Comments';
 /**
  * Decide if the toc should be rendered, on mobile or desktop viewports
  */
@@ -34,28 +35,6 @@ function useDocTOC() {
 export default function DocItemLayout({children}) {
   const docTOC = useDocTOC();
   const {metadata} = useDoc();
-  const commentElement = useRef(null);
-  useEffect(() => {
-    if (commentElement.current) {
-      const script = document.createElement('script');
-      script.src = 'https://giscus.app/client.js';
-      script.setAttribute("data-repo", "yuryqwer/golanguide");
-      script.setAttribute("data-repo-id", "R_kgDORguNUg");
-      script.setAttribute("data-category", "Announcements");
-      script.setAttribute("data-category-id", "DIC_kwDORguNUs4C39Hq");
-      script.setAttribute("data-mapping", "pathname");
-      script.setAttribute("data-strict", "0");
-      script.setAttribute("data-reactions-enabled", "1");
-      script.setAttribute("data-emit-metadata", "0");
-      script.setAttribute("data-input-position", "top");
-      script.setAttribute("data-theme", "preferred_color_scheme");
-      script.setAttribute("data-lang", "zh-CN");
-      script.setAttribute("data-loading", "lazy");
-      script.setAttribute("crossorigin", "anonymous");
-      script.async = true;
-      commentElement.current.appendChild(script);
-    }
-  }, []);
   return (
     <div className="row">
       <div className={clsx('col', !docTOC.hidden && styles.docItemCol)}>
@@ -67,7 +46,7 @@ export default function DocItemLayout({children}) {
             <DocVersionBadge />
             {docTOC.mobile}
             <DocItemContent>{children}</DocItemContent>
-            <div style={{marginTop: '20px'}} ref={commentElement}></div>
+            <div style={{marginTop: '20px'}}><GiscusComments /></div>
             <DocItemFooter />
           </article>
           <DocItemPaginator />

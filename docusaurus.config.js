@@ -98,6 +98,12 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
+      giscus: {
+        repo: "yuryqwer/golanguide",
+        repoId: process.env.GISCUS_REPO_ID,
+        category: "Announcements",
+        categoryId: process.env.GISCUS_CATEGORY_ID,
+      }
     }),
 };
 
