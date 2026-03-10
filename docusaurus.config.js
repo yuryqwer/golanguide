@@ -84,12 +84,12 @@ const config = {
             position: 'left',
             label: '🧭 面试指南',
           },
-          // {
-          //   type: 'docSidebar',
-          //   sidebarId: 'experienceSidebar',
-          //   position: 'left',
-          //   label: ' 真实面经',
-          // },
+          {
+            type: 'docSidebar',
+            sidebarId: 'experienceSidebar',
+            position: 'left',
+            label: '👨‍💻 真实面经',
+          },
           {
             href: 'https://github.com/yuryqwer/golanguide',
             label: 'GitHub',
