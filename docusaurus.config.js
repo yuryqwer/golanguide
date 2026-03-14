@@ -11,7 +11,7 @@ import {themes as prismThemes} from 'prism-react-renderer';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'Golanguide',
-  tagline: 'Golang 面试 & 后端通用面试指南，覆盖计算机基础、数据库、分布式、高并发与系统设计',
+  tagline: '助力 Go 开发者高效准备面试，系统梳理后端核心知识点，涵盖 Go 语言基础、缓存、数据库、分布式系统等高频考点',
   favicon: 'img/Go_Logo_Wine.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
@@ -104,17 +104,17 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      giscus: {
-        repo: process.env.GISCUS_REPO,
-        repoId: process.env.GISCUS_REPO_ID,
-        category: 'Announcements',
-        categoryId: process.env.GISCUS_CATEGORY_ID,
-      },
-      algolia: {
-        appId: process.env.ALGOLIA_APP_ID,
-        apiKey: process.env.ALGOLIA_API_KEY,
-        indexName: process.env.ALGOLIA_INDEX_NAME,
-      }
+      // giscus: {
+      //   repo: process.env.GISCUS_REPO,
+      //   repoId: process.env.GISCUS_REPO_ID,
+      //   category: 'Announcements',
+      //   categoryId: process.env.GISCUS_CATEGORY_ID,
+      // },
+      // algolia: {
+      //   appId: process.env.ALGOLIA_APP_ID,
+      //   apiKey: process.env.ALGOLIA_API_KEY,
+      //   indexName: process.env.ALGOLIA_INDEX_NAME,
+      // }
     }),
 };
 
