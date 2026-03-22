@@ -104,17 +104,17 @@ const config = {
         theme: prismThemes.github,
         darkTheme: prismThemes.dracula,
       },
-      // giscus: {
-      //   repo: process.env.GISCUS_REPO,
-      //   repoId: process.env.GISCUS_REPO_ID,
-      //   category: 'Announcements',
-      //   categoryId: process.env.GISCUS_CATEGORY_ID,
-      // },
-      // algolia: {
-      //   appId: process.env.ALGOLIA_APP_ID,
-      //   apiKey: process.env.ALGOLIA_API_KEY,
-      //   indexName: process.env.ALGOLIA_INDEX_NAME,
-      // }
+      giscus: {
+        repo: process.env.GISCUS_REPO,
+        repoId: process.env.GISCUS_REPO_ID,
+        category: 'Announcements',
+        categoryId: process.env.GISCUS_CATEGORY_ID,
+      },
+      algolia: {
+        appId: process.env.ALGOLIA_APP_ID,
+        apiKey: process.env.ALGOLIA_API_KEY,
+        indexName: process.env.ALGOLIA_INDEX_NAME,
+      }
     }),
 };
 
